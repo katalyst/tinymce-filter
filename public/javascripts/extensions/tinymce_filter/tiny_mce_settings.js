@@ -20,6 +20,7 @@ tinyMCE.init({
     table_row_styles : "",
     
     theme_advanced_statusbar_location : "bottom",
+    theme_advanced_resizing: true,
     inline_styles : true,
     verify_html: true,
     paste_use_dialog : false,
