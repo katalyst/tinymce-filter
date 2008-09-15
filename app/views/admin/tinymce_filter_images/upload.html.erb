@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<link href="/javascripts/extensions/tiny_mce/plugins/advimage/css/advimage.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="margin: 0; padding: 0;">
+    <form method="post" action="/admin/tinymce_filter_images/upload" enctype="multipart/form-data" style="margin: 0;" id="form">
+       <%= hidden_field_tag("authenticity_token", form_authenticity_token) %>
+       <input id="file" name="file" type="file" value="" class="mceFocus" style="width: 200px;" />
+    </form>
+</body> 
+</html>
