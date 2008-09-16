@@ -207,7 +207,7 @@ function text_input_method(index, filter)
       // control for page parts
       elem = $('part_'+(index - 1)+'_content');
 
-      if (filter == "TinyMce")
+      if (filter == "Tinymce")
       {
          tinyMCE.execCommand('mceAddControl',true,'part_'+(index - 1)+'_content');
          setTimeout("$('part_"+(index - 1)+"_content').style.display = 'none'", 1);
@@ -220,7 +220,7 @@ function text_input_method(index, filter)
    else
    {
       // control for snippets
-      if (filter == "TinyMce")
+      if (filter == "Tinymce")
       {
          tinyMCE.execCommand('mceAddControl',true,'snippet_content');
          setTimeout("$('snippet_content').style.display = 'none'", 1);
@@ -266,9 +266,9 @@ function init_load_tiny_mce()
       for(var i = 0; i < parts.length; i++)
       {
          select = $('part[' + i + '][filter_id]') || $('part_' + i + '_filter_id')
-         if ($F(select) == 'TinyMce')
+         if ($F(select) == 'Tinymce')
          {
-            text_input_method((i + 1), 'TinyMce');
+            text_input_method((i + 1), 'Tinymce');
          }
 
          Event.observe(select, 'change', function(event)
@@ -282,9 +282,9 @@ function init_load_tiny_mce()
    }
    else if($('snippet[filter_id]')) 
    {
-      if($F('snippet[filter_id]') == 'TinyMce') 
+      if($F('snippet[filter_id]') == 'Tinymce') 
       {
-         text_input_method(null, 'TinyMce');
+         text_input_method(null, 'Tinymce');
       }
 
       Event.observe($('snippet[filter_id]'), 'change', function(event)
